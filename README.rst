@@ -1,4 +1,4 @@
 Smart URLs for Django
 =====================
 
-http://amitu.com/django-surl/
+http://amitu.com/smarturls/
