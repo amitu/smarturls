@@ -10,7 +10,7 @@ REGEXERS = {
     "int4": "\d{4,4}",
 }
 REGEXERS.update(getattr(settings, "SURL_REGEXERS", {}))
-R = re.compile("<((\w+:)?\w+)>")
+_R = re.compile("<((\w+:)?\w+)>")
 
 def _regex_substituter(m):
     name = m.groups()[0]
@@ -20,7 +20,7 @@ def _regex_substituter(m):
 
 def translate_regex(regex):
     if not regex.startswith("/"): return regex
-    return "^%s$" % R.sub(_regex_substituter, regex)[1:]
+    return "^%s$" % _R.sub(_regex_substituter, regex)[1:]
 
 def surl(regex, *args, **kw):
     return url(translate_regex(regex), *args, **kw)

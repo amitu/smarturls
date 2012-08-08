@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name = "django-surl",
+    name = "smarturls",
     description = "a url construction helper for django",
     long_description=open('README.rst', 'rt').read(),
 
@@ -9,10 +9,10 @@ setup(
     author = 'Amit Upadhyay',
     author_email = "upadhyay@gmail.com",
 
-    url = 'http://amitu.com/django-surl/',
+    url = 'http://amitu.com/smarturls/',
     license = 'BSD',
 
-    py_modules = ["django_surl"],
+    py_modules = ["smarturls"],
 
     zip_safe = True,
 )
