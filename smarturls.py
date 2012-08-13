@@ -8,6 +8,8 @@ REGEXERS = {
     "int": "\d+",
     "int2": "\d{2,2}",
     "int4": "\d{4,4}",
+    "slug": "[\w-]+",
+    "username": "[\w.@+-]+",
 }
 REGEXERS.update(getattr(settings, "SURL_REGEXERS", {}))
 _R = re.compile("<((\w+:)?\w+)>")
