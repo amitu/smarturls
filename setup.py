@@ -1,11 +1,16 @@
 from setuptools import setup
 
+try:
+    long_description=open('README.rst', 'rt').read()
+except Exception:
+    long_description=""
+
 setup(
     name = "smarturls",
     description = "a url construction helper for django",
-    long_description=open('README.rst', 'rt').read(),
+    long_description=long_description,
 
-    version = "0.1.1",
+    version = "0.1.2",
     author = 'Amit Upadhyay',
     author_email = "upadhyay@gmail.com",
 
