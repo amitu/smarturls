@@ -1,9 +1,9 @@
 import re
 from django.conf import settings
 try:
-    from django.conf.urls.defaults import url
+    from django.conf.urls.defaults import url as ourl
 except ImportError:
-    from django.conf.urls import url
+    from django.conf.urls import url as ourl
 
 REGEXERS = {
     "word": "\w+",
@@ -28,4 +28,6 @@ def translate_regex(regex):
     return "^%s$" % _R.sub(_regex_substituter, regex)[1:]
 
 def surl(regex, *args, **kw):
-    return url(translate_regex(regex), *args, **kw)
+    return ourl(translate_regex(regex), *args, **kw)
+
+url = surl

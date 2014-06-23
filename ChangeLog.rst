@@ -1,3 +1,8 @@
+0.1.4 - 23-Jun-2013
+==================
+
+ * now you can do `from smarturls import url`
+
 0.1.3 - 4-Nov-2013
 ==================
 

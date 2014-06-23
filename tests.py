@@ -1,7 +1,9 @@
 from importd import d
 d(no_atexit=True)
-from smarturls import translate_regex
+from smarturls import translate_regex, surl, url
 import re
+
+assert url == surl
 
 TESTS = {
     "/<int:foo>/": (
