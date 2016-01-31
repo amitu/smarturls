@@ -10,7 +10,7 @@ setup(
     description = "a url construction helper for django",
     long_description=long_description,
 
-    version = "0.1.4",
+    version = "0.1.5",
     author = 'Amit Upadhyay',
     author_email = "upadhyay@gmail.com",
 

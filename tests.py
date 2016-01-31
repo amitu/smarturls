@@ -1,9 +1,14 @@
-from importd import d
-d(no_atexit=True)
-from smarturls import translate_regex, surl, url
+
 import re
 
+
+from importd import d
+d(no_atexit=True)
+
+from smarturls import translate_regex, surl, url
+
 assert url == surl
+
 
 TESTS = {
     "/<int:foo>/": (
@@ -55,5 +60,5 @@ for pattern in TESTS:
         )
         count += 1
 
-print "All %s smarturls tests passed." % count
 
+print("All {0} smarturls tests passed.".format(count))

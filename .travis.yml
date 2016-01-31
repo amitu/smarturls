@@ -1,0 +1,39 @@
+
+sudo: false
+
+
+language: python
+
+
+python:
+    - 2.7
+    - 3.5
+
+
+os:
+    - linux
+#    - osx
+
+
+before_install: pip install --upgrade pip setuptools wheel tox importd --quiet
+
+
+install: true
+
+
+before_script: pyclean --verbose .
+
+
+script:
+    - tox
+
+after_script: true
+
+
+after_success: true
+
+
+after_failure: true
+
+
+cache: apt
