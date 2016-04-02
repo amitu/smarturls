@@ -19,6 +19,7 @@ REGEXERS = {
     "int4": "\d{4,4}",
     "slug": "[\w-]+",
     "username": "[\w.@+-]+",
+    "uuid": "[0-9a-f]{32}",
 }
 REGEXERS.update(getattr(settings, "SURL_REGEXERS", {}))
 _R = re.compile("<((\w+:)?\w+)>")
