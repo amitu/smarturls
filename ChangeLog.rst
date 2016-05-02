@@ -1,10 +1,15 @@
+0.1.6 - 2-May-2016
+==================
+
+ * added uuid, base64 and ekey patterns
+
 0.1.5 - 1-Feb-2016
 ==================
 
  * Python3 Compatibility, PEP8, Tox Tests.
 
 0.1.4 - 23-Jun-2013
-==================
+===================
 
  * now you can do `from smarturls import url`
 

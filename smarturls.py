@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-
-
 import re
 
 from django.conf import settings
@@ -10,7 +8,6 @@ try:
 except ImportError:
     from django.conf.urls import url as ourl
 
-
 REGEXERS = {
     "word": "\w+",
     "digit": "\d",
@@ -19,14 +16,17 @@ REGEXERS = {
     "int4": "\d{4,4}",
     "slug": "[\w-]+",
     "username": "[\w.@+-]+",
-    "uuid": "[a-f0-9]{8}-?[a-f0-9]{4}-?4[a-f0-9]{3}-?[89ab][a-f0-9]{3}-?[a-f0-9]{12}",
+    "uuid": "[A-Fa-f0-9]{8}-?[A-Fa-f0-9]{4}-?4[A-Fa-f0-9]{3}-?[89abAB][a-fA-F0-9]{3}-?[a-fA-F0-9]{12}",
+    "base64": "[0-9a-zA-Z\-_]+={0,2}",
+    "ekey": "[0-9a-zA-Z\-_]+\.{0,2}",
 }
+
 REGEXERS.update(getattr(settings, "SURL_REGEXERS", {}))
 _R = re.compile("<((\w+:)?\w+)>")
 
 
 def _regex_substituter(m):
-    """Regular Expression susbtitutions."""
+    """Regular Expression substitutions."""
     name = m.groups()[0]
     if ":" not in name:
         name = "word:%s" % name
