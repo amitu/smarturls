@@ -1,3 +1,8 @@
+0.1.7 - 1-Jun-2017
+==================
+
+ * Added something and anything patterns
+
 0.1.6 - 2-May-2016
 ==================
 
