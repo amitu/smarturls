@@ -1,27 +1,25 @@
 
-sudo: false
-
-
 language: python
 
 
 python:
     - 2.7
     - 3.5
+    - 3.6
+    - nightly
 
 
 os:
     - linux
-#    - osx
 
 
-before_install: pip install --upgrade pip setuptools wheel tox importd --quiet
+before_install: pip install --upgrade pip setuptools wheel tox importd virtualenv --quiet
 
 
 install: true
 
 
-before_script: pyclean --verbose .
+before_script: rm --recursive --force --verbose *.py[cod]
 
 
 script:
@@ -36,4 +34,6 @@ after_success: true
 after_failure: true
 
 
-cache: apt
+cache:
+  apt: true
+  pip: true
