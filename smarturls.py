@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+
+
+"""Smarturls an URL construction helper for Django."""
+
+
 import re
 
 from django.conf import settings
@@ -7,6 +12,12 @@ try:
     from django.conf.urls.defaults import url as ourl
 except ImportError:
     from django.conf.urls import url as ourl
+
+
+__license__ = "BSD"
+__author__ = "Amit Upadhyay"
+__url__ = "https://github.com/amitu/smarturls#smart-urls-for-django"
+
 
 REGEXERS = {
     "word": "\w+",
@@ -22,6 +33,7 @@ REGEXERS = {
     "something": ".+",
     "anything": ".*",
 }
+
 
 REGEXERS.update(getattr(settings, "SURL_REGEXERS", {}))
 _R = re.compile("<((\w+:)?\w+)>")
