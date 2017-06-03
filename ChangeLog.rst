@@ -1,3 +1,12 @@
+0.1.8 - 3-Jun-2017
+==================
+
+ * Update .travis.yml remove deprecated stuff, added new python versions.
+ * Update tox.ini remove deprecated stuff, added new python versions.
+ * Update setup.py bump versions, add metadata.
+ * Improve .gitignore.
+ * Add DocString and metadata to smarturls.py.
+
 0.1.7 - 1-Jun-2017
 ==================
 
