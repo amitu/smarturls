@@ -29,7 +29,7 @@ REGEXERS = {
     "username": "[\w.@+-]+",
     "uuid": "[A-Fa-f0-9]{8}-?[A-Fa-f0-9]{4}-?4[A-Fa-f0-9]{3}-?[89abAB][a-fA-F0-9]{3}-?[a-fA-F0-9]{12}",
     "base64": "[0-9a-zA-Z\-_]+={0,2}",
-    "ekey": "[0-9a-zA-Z\-_]+\.{0,2}",
+    "ekey": "\$?[0-9a-zA-Z\-_]+\.{0,2}",
     "something": ".+",
     "anything": ".*",
 }
