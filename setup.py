@@ -13,7 +13,7 @@ setup(
     description="A URL construction helper for Django.",
     long_description=long_description,
 
-    version="0.1.8",
+    version="0.1.9",
     author='Amit Upadhyay',
     author_email="upadhyay@gmail.com",
 
